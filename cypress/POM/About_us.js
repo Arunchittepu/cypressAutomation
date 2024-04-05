@@ -45,13 +45,14 @@ class aboutUs{
         cy.findByRole('img', { name: 'Sándwich de pollo Chick-fil-A®' }).should('be.visible');
     }
     Chicken_sandwich_Url(){
-        cy.get('[data-tag="SPICY_DELUXE_SANDWICH"] > .test1 > .item-details > .item-title').should('be.visible').click();
+        cy.get('[data-tag="SANDWICH_CFA_CHICKEN"] > a > .item-details > .item-title').should('be.visible').click();
+       // cy.get('[data-tag="SPICY_DELUXE_SANDWICH"] > .test1 > .item-details > .item-title').should('be.visible').click();
     }
     Sandwitch_chickFil_A_Img(){
         cy.findByRole('img', { name: 'Sándwich deluxe de pollo Chick-fil-A®' }).should('be.visible');
     }
     Sandwitch_chickFil_A_link(){
-        cy.get('[data-tag="CFA_DELUXE_SANDWICH"] > .test1 > .item-details > .item-title').should('be.visible').click();
+        cy.get('[data-tag="CFA_DELUXE_SANDWICH"] > a > .item-details > .item-title').should('be.visible').click();
     }
     Sandwich_picante_Img(){
         cy.findByRole('img', { name: 'Sándwich de pollo picante' }).should('be.visible');
