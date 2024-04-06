@@ -170,8 +170,8 @@ class Meal{
         cy.findByRole('img', { name: 'Ensalada de frutas' }).should('be.visible');
     }
     Ensalada_de_frutas_Url(){
-       // cy.findByText('Ensalada de frutas').eq(2).should('be.visible').click();
-       cy.get(':nth-child(4) > .flex > [data-tag="FRUIT_CUP"] > .test1 > .item-details > .item-title').click();
+       //cy.findByText('Ensalada de frutas').should('be.visible').click();
+       cy.get(':nth-child(4) > .flex > [data-tag="FRUIT_CUP"] > a > .item-details > .item-title').click();
       // cy.findByText('Ensalada Chick-fil-A®').click();
     }
     check_Ensalada_de_frutas_url(){
@@ -247,7 +247,8 @@ class Meal{
         cy.findByText('Sopa de pollo').should('be.visible').click();
     }
     chicken_soup_Img(){
-        cy.findByRole('img', { name: 'Chicken Soup' }).should('be.visible')
+        cy.findByRole('img', { name: 'Chi' }).should('be.visible');
+        //cy.findByRole('img', { name: 'Chicken Soup' }).should('be.visible')
     }
     chicken_soup_Url(){
         cy.findByText('Chicken Soup').should('be.visible').click();
@@ -834,7 +835,7 @@ class Meal{
         cy.xpath("//span[contains(text(),'Ensalada')]").eq(4).should('be.visible').click();
     }
     Catering_Waffel_Potato_Chips_Img(){
-        cy.findByRole('img', { name: 'Chick-fil-A® Waffle Potatoe Chips' }).scrollIntoView().should('be.visible');
+        cy.findByRole('img', { name: 'Chick-fil-A® Waffle Potato Chips' }).scrollIntoView().should('be.visible');
     }
     Catering_Waffel_Potato_Chips_Url(){
        // cy.findByText('Chick-fil-A® Waffle Potatoe Chips').should('be.visible').click();
@@ -967,11 +968,11 @@ class Meal{
         cy.findByRole('link', { name: 'Comidas Empaquetadas' }).should('be.visible').click();
     }
     Sandwich_de_pollo_Kit_Regular_Img(){
-        cy.get('[alt="Sándwich de pollo Chick-fil-A® Kit, regular"]').scrollIntoView().should('be.visible')
+        cy.findByRole('img', { name: 'Sándwich de pollo Chick-fil-A® Kit' }).scrollIntoView().should('be.visible')
     }
     Sandwich_de_pollo_Kit_Regular_Url(){
-        //cy.findByText('Sándwich de pollo Chick-fil-A® Kit, regular').should('be.visible').click();
-        cy.xpath("//span[contains(text(),'Sándwich de pollo Chick-fil-A')]").eq(1).should('be.visible').click();
+        cy.get('[data-tag="MEAL_PACK_SANDWICH_CFA_CHICKEN"] > a > .item-details > .item-title').should('be.visible').click();
+       // cy.xpath("//span[contains(text(),'Sándwich de pollo Chick-fil-A® Kit')]").should('be.visible').click();
     }
     Sandwich_de_pollo_picante_Kit_Regular_Img(){
     cy.findByRole('img', { name: 'Sándwich de pollo picante Kit' }).should('be.visible')

@@ -271,12 +271,12 @@ it('Navigate to Meal and check the Breakfast ', () => {
       Chickfile_meal.closeLocationPopup();
       Chickfile_meal.checkLearnMore();
     })
-    it('check Macaroni and cheese Img is visible and can able to Navigate properly', () => {
+    it('check Chicken Soup is visible and can able to Navigate properly', () => {
       Chickfile_meal.MenuUrl();
       Chickfile_meal.NavigateComida();
       Chickfile_meal.Navigate_to_Acompanamientos();
-      Chickfile_meal.chicken_soup_Img();
-      Chickfile_meal.chicken_soup_Url();
+      Chickfile_meal.Sopa_de_pollo_Img();
+      Chickfile_meal.Sopa_de_pollo_Url();
       Chickfile_meal.Product_Information();
       Chickfile_meal.clickonAdditional();
       Chickfile_meal.clickonIngredients();

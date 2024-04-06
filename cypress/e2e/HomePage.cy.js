@@ -14,41 +14,41 @@ describe('visit Home Page Url', () => {
     cy.visit('/', { failOnStatusCode: false }); // Cypress will automatically prepend the base URL
   })
 
-  // it('Check Logo and Locations Icons are working or not in Home Page', () => {
-  //    ChickfilhomePage.chickfil_Logo();
-  //    ChickfilhomePage.Locations();
-  //    ChickfilhomePage.checkLocationsUrl();
-  //    cy.wait(3000);
-  //    ChickfilhomePage.VisitoneLocation();
-  //    cy.go('back');
-  //   })
-  // it('Navigate and check Index Icons are working Propely in Home Page', () =>{
-  //   ChickfilhomePage.Visit_Homepage_Url();
-  //    ChickfilhomePage.visitsobre_nosotros();
-  //    ChickfilhomePage.checksobre_nosotrosPge();
-  //    cy.go('back');
-  //    ChickfilhomePage.Visitcomida();
-  //    ChickfilhomePage.checkcomidaUrl();
-  //    ChickfilhomePage.checkinsideMenu();
-  //    cy.go('back');
-  //    ChickfilhomePage.clickOnoportunidades_de_empleo();
-  //    ChickfilhomePage.viewoportunidades_de_empleo_Url();
-  //    ChickfilhomePage.viewInside_oportunidades_de_empleo();
-  //    cy.go('back');
-  //   })
-  //   it('check Home Page cover Image and heading', () =>{
-  //    ChickfilhomePage.Visit_Homepage_Url();
-  //    ChickfilhomePage.mangoPassionImg();
-  //    ChickfilhomePage.checkCoverText();
-  //   })
-  //   it('while cliking on Explore menu weather the page is opening or nor', () =>{
-  //    ChickfilhomePage.Visit_Homepage_Url();
-  //    ChickfilhomePage.ClickOnNuestroMenu();
-  //    ChickfilhomePage.visitExploreMenu();
-  //    ChickfilhomePage.seeMenuchickFil();
-  //    cy.go('back');
-  //    cy.wait(3000);
-  //   })
+  it('Check Logo and Locations Icons are working or not in Home Page', () => {
+     ChickfilhomePage.chickfil_Logo();
+     ChickfilhomePage.Locations();
+     ChickfilhomePage.checkLocationsUrl();
+     cy.wait(3000);
+     ChickfilhomePage.VisitoneLocation();
+     cy.go('back');
+    })
+  it('Navigate and check Index Icons are working Propely in Home Page', () =>{
+    ChickfilhomePage.Visit_Homepage_Url();
+     ChickfilhomePage.visitsobre_nosotros();
+     ChickfilhomePage.checksobre_nosotrosPge();
+     cy.go('back');
+     ChickfilhomePage.Visitcomida();
+     ChickfilhomePage.checkcomidaUrl();
+     ChickfilhomePage.checkinsideMenu();
+     cy.go('back');
+     ChickfilhomePage.clickOnoportunidades_de_empleo();
+     ChickfilhomePage.viewoportunidades_de_empleo_Url();
+     ChickfilhomePage.viewInside_oportunidades_de_empleo();
+     cy.go('back');
+    })
+    it('check Home Page cover Image and heading', () =>{
+     ChickfilhomePage.Visit_Homepage_Url();
+     ChickfilhomePage.mangoPassionImg();
+     ChickfilhomePage.checkCoverText();
+    })
+    it('while cliking on Explore menu weather the page is opening or nor', () =>{
+     ChickfilhomePage.Visit_Homepage_Url();
+     ChickfilhomePage.ClickOnNuestroMenu();
+     ChickfilhomePage.visitExploreMenu();
+     ChickfilhomePage.seeMenuchickFil();
+     cy.go('back');
+     cy.wait(3000);
+    })
     it('Check first 10 stories are visible and able to Navigate', () =>{
      ChickfilhomePage.Visit_Homepage_Url();
      ChickfilhomePage.Visit2Img();
