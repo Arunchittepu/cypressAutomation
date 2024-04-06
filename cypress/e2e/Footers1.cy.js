@@ -174,6 +174,11 @@ describe('visit Footers Page Url', () => {
     Chickfile_Footers.InsideIngredientsFindArestaurant();
     Chickfile_Footers.seeRestaurantlocation();
     cy.go('back');
+  })
+it('check Dulces,Bebidas,Salsas are working properly or not',() =>{
+    Chickfile_Footers.Home_Page_Url();
+    Chickfile_Footers.Navigate_to_Nutrients_And_Allergens();
+    cy.scrollTo(0,500);
     Chickfile_Footers.Limonada_Froasted_de_Mango_Parcha_bebidas();
     Chickfile_Footers.Product_Information();
     Chickfile_Footers.clickonIngredients();
@@ -431,6 +436,11 @@ describe('visit Footers Page Url', () => {
     Chickfile_Footers.seeRestaurantlocation();
     cy.go('back');
     cy.wait(3000);
+})
+it('check Aderezos are working properly or not',() =>{
+  Chickfile_Footers.Home_Page_Url();
+  Chickfile_Footers.Navigate_to_Nutrients_And_Allergens();
+  cy.scrollTo(0,500);
     Chickfile_Footers.Aderazo_Avocado_Lime_Ranch();
     Chickfile_Footers.Product_Information();
     Chickfile_Footers.clickonIngredients();
@@ -470,6 +480,7 @@ describe('visit Footers Page Url', () => {
     cy.go('back');
     cy.wait(3000);
   })
+  
 
   it('check the Franchise footer weather we can navigate or not',() => {
       Chickfile_Footers.Home_Page_Url();
