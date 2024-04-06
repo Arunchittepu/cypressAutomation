@@ -170,8 +170,9 @@ class Meal{
         cy.findByRole('img', { name: 'Ensalada de frutas' }).should('be.visible');
     }
     Ensalada_de_frutas_Url(){
-       // cy.findByText('Ensalada de frutas').eq(2).should('be.visible').click();
-       cy.get(':nth-child(4) > .flex > [data-tag="FRUIT_CUP"] > .test1 > .item-details > .item-title').click();
+       //cy.findByText('Ensalada de frutas').should('be.visible').click();
+       cy.get(':nth-child(4) > .flex > [data-tag="FRUIT_CUP"] > a > .item-details > .item-title').click();
+      // cy.findByText('Ensalada Chick-fil-A®').click();
     }
     check_Ensalada_de_frutas_url(){
         cy.url().should('eq',Cypress.config().baseUrl  + '/menu/ensalada-de-frutas')
@@ -246,7 +247,8 @@ class Meal{
         cy.findByText('Sopa de pollo').should('be.visible').click();
     }
     chicken_soup_Img(){
-        cy.findByRole('img', { name: 'Chicken Soup' }).should('be.visible')
+        cy.findByRole('img', { name: 'Chi' }).should('be.visible');
+        //cy.findByRole('img', { name: 'Chicken Soup' }).should('be.visible')
     }
     chicken_soup_Url(){
         cy.findByText('Chicken Soup').should('be.visible').click();
@@ -397,16 +399,19 @@ class Meal{
         cy.url().should('eq',Cypress.config().baseUrl  + '/menu/sunjoy12-t-con-azcar-12-limonada')
     }
     Sunjoy_Te_con_limonada_de_dieta_Img(){
-        cy.get('[data-tag="SWEET_TEA_DIET_LEMONADE"] > .test1 > .item-details > .product > img').should('be.visible');
+        cy.get('[data-tag="SWEET_TEA_DIET_LEMONADE"] > a > .item-details > .product > img').should('be.visible');
+        //cy.get('[data-tag="SWEET_TEA_DIET_LEMONADE"] > .test1 > .item-details > .product > img').should('be.visible');
     }
     Sunjoy_Te_con_limonada_de_dieta_Url(){
+        
         cy.findByText('Sunjoy (1/2 té con azúcar, 1/2 limonada de dieta)').should('be.visible').click();
     }
     check_Sunjoy_Te_con_limonada_de_dieta_Url(){
         cy.url().should('eq',Cypress.config().baseUrl  + '/menu/sunjoy12-t-con-azcar-12-limonada-de-dieta')
     }
     Sunjoy_té_sin_azúcar_limonada_Img(){
-        cy.get('[data-tag="UNSWEET_TEA_LEMOMADE"] > .test1 > .item-details > .product > img').should('be.visible');
+        cy.get('[data-tag="UNSWEET_TEA_LEMOMADE"] > a > .item-details > .product > img').should('be.visible');
+       // cy.get('[data-tag="UNSWEET_TEA_LEMOMADE"] > .test1 > .item-details > .product > img').should('be.visible');
     }
     Sunjoy_té_sin_azúcar_limonada_Url(){
         cy.findByText('Sunjoy (1/2 té sin azúcar, 1/2 limonada)').should('be.visible').click();
@@ -415,7 +420,8 @@ class Meal{
         cy.url().should('eq',Cypress.config().baseUrl  + '/menu/sunjoy12-t-sin-azcar-12-limonada')
     }
     Sunjoy_Te_sin_limonada_de_dieta_Img(){
-        cy.get('[data-tag="UNSWEET_TEA_DIET_LEMONADE"] > .test1 > .item-details > .product > img').should('be.visible');
+        cy.get('[data-tag="UNSWEET_TEA_DIET_LEMONADE"] > a > .item-details > .product > img').should('be.visible');
+        //cy.get('[data-tag="UNSWEET_TEA_DIET_LEMONADE"] > .test1 > .item-details > .product > img').should('be.visible');
     }
     Sunjoy_Te_sin_limonada_de_dieta_Url(){
         cy.findByText('Sunjoy (1/2 té sin azúcar, 1/2 limonada de dieta)').should('be.visible').click();
@@ -445,7 +451,8 @@ class Meal{
         cy.findByRole('img', { name: 'Agua embotellada DASANI®' }).should('be.visible')
     }
     Agua_embotellada_DASANI_Url(){
-        cy.get('[data-tag="BOTTLED_WATER"] > .test1 > .item-details > .item-title').should('be.visible').click();
+        cy.get('[data-tag="BOTTLED_WATER"] > a > .item-details > .item-title').should('be.visible').click();
+        //cy.get('[data-tag="BOTTLED_WATER"] > .test1 > .item-details > .item-title').should('be.visible').click();
     }
     check_Agua_embotellada_DASANI_Url(){
         cy.url().should('eq',Cypress.config().baseUrl  + '/menu/agua-embotellada-dasani')
@@ -674,7 +681,8 @@ class Meal{
     }
     Nuggets_Chick_fil_link(){
        // cy.findByText('Nuggets Chick-fil-A®')
-       cy.get('[data-tag="NUGGETS_CFA"] > .test1 > .item-details > .item-title').should('be.visible').click();
+       cy.get('[data-tag="NUGGETS_CFA"] > a > .item-details > .item-title').should('be.visible').click();
+      // cy.get('[data-tag="NUGGETS_CFA"] > .test1 > .item-details > .item-title').should('be.visible').click();
     }
     check_Nuggets_Chick_fil_Url(){
         cy.url().should('eq',Cypress.config().baseUrl  + '/catering/nuggets-chick-fil-a')
@@ -787,7 +795,8 @@ class Meal{
     }
     Sandwith_de_Pollo_Url(){
         //cy.findByText('Sándwich de pollo Chick-fil-A®')
-        cy.get('[data-tag="SANDWICH_CFA_CHICKEN"] > .test1 > .item-details > .item-title').should('be.visible').click();
+        cy.get('[data-tag="SANDWICH_CFA_CHICKEN"] > a > .item-details > .item-title').should('be.visible').click();
+       // cy.get('[data-tag="SANDWICH_CFA_CHICKEN"] > .test1 > .item-details > .item-title').should('be.visible').click();
     }
     Sandwich_de_pollo_picante_Img(){
         cy.findByRole('img', { name: 'Sándwich de pollo picante' }).should('be.visible')
@@ -826,11 +835,11 @@ class Meal{
         cy.xpath("//span[contains(text(),'Ensalada')]").eq(4).should('be.visible').click();
     }
     Catering_Waffel_Potato_Chips_Img(){
-        cy.findByRole('img', { name: 'Chick-fil-A® Waffle Potatoe Chips' }).should('be.visible')
+        cy.findByRole('img', { name: 'Chick-fil-A® Waffle Potato Chips' }).scrollIntoView().should('be.visible');
     }
     Catering_Waffel_Potato_Chips_Url(){
        // cy.findByText('Chick-fil-A® Waffle Potatoe Chips').should('be.visible').click();
-       cy.get('[data-tag="CHIPS_WAFFLE"] > .test1 > .item-details > .item-title').should('be.visible').click();
+       cy.get('[data-tag="CHIPS_WAFFLE"] > a > .item-details > .item-title').should('be.visible').click();
     }
     Catering_Galleta_de_chocolate_chip_Img(){
         cy.findByRole('img', { name: 'Galleta de chocolate chip' }).should('be.visible')
@@ -959,25 +968,25 @@ class Meal{
         cy.findByRole('link', { name: 'Comidas Empaquetadas' }).should('be.visible').click();
     }
     Sandwich_de_pollo_Kit_Regular_Img(){
-        cy.findByRole('img', { name: 'Sándwich de pollo Chick-fil-A® Kit, regular' }).should('be.visible')
+        cy.findByRole('img', { name: 'Sándwich de pollo Chick-fil-A® Kit' }).scrollIntoView().should('be.visible')
     }
     Sandwich_de_pollo_Kit_Regular_Url(){
-        //cy.findByText('Sándwich de pollo Chick-fil-A® Kit, regular').should('be.visible').click();
-        cy.xpath("//span[contains(text(),'Sándwich de pollo Chick-fil-A')]").eq(1).should('be.visible').click();
+        cy.get('[data-tag="MEAL_PACK_SANDWICH_CFA_CHICKEN"] > a > .item-details > .item-title').should('be.visible').click();
+       // cy.xpath("//span[contains(text(),'Sándwich de pollo Chick-fil-A® Kit')]").should('be.visible').click();
     }
     Sandwich_de_pollo_picante_Kit_Regular_Img(){
-        cy.findByRole('img', { name: 'Sándwich de pollo picante Chick-fil-A® Kit' }).should('be.visible')
+    cy.findByRole('img', { name: 'Sándwich de pollo picante Kit' }).should('be.visible')
     }
     Sandwich_de_pollo_picante_Kit_Regular_Url(){
         //cy.findByText('Sándwich de pollo picante Chick-fil-A® Kit').should('be.visible').click();
-        cy.xpath("//span[contains(text(),'Sándwich de pollo picante Chick-fil-A')]").should('be.visible').click();
+        cy.xpath("//span[contains(text(),'Sándwich de pollo picante Kit')]").should('be.visible').click();
     }
     ct_Nuggets_Kit_Img(){
-        cy.findByRole('img', { name: '8 ct Nuggets Chick-fil-A® Kit' }).should('be.visible')
+        cy.findByRole('img', { name: '8 ct Pepitas Chick-fil-A® Kit' }).scrollIntoView().should('be.visible')
     }
     ct_Nuggets_Kit_Url(){
        // cy.findByText('8 ct Nuggets Chick-fil-A® Kit').should('be.visible').click();
-       cy.xpath("//span[contains(text(),'8 ct Nuggets Chick-fil-A')]").should('be.visible').click();
+       cy.get('[data-tag="MEAL_PACK_8CT_NUGS"] > a > .item-details > .item-title').should('be.visible').click();
     }
     Navigate_to_See_Personal_Menu(){
         cy.get('[title="View persoanl menu"]').should('be.visible').click();

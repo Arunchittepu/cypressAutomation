@@ -49,7 +49,7 @@ describe('visit Home Page Url', () => {
      cy.go('back');
      cy.wait(3000);
     })
-    it('Check All stories are visible and able to Navigate', () =>{
+    it('Check first 10 stories are visible and able to Navigate', () =>{
      ChickfilhomePage.Visit_Homepage_Url();
      ChickfilhomePage.Visit2Img();
      ChickfilhomePage.Visit2ImgURL();
@@ -114,6 +114,9 @@ describe('visit Home Page Url', () => {
      ChickfilhomePage.clickon9Leemass();
      cy.go('back');
      cy.wait(3000);
+    })
+    it('Check first 10 stories are visible and able to Navigate', () =>{
+     ChickfilhomePage.Visit_Homepage_Url();
      ChickfilhomePage.visit11Img();
      ChickfilhomePage.clickonImg11link();
      ChickfilhomePage.viewImg11heading();
@@ -185,6 +188,9 @@ describe('visit Home Page Url', () => {
      ChickfilhomePage.clickon19Leemass();
      cy.go('back');
      cy.wait(3000);
+    })
+    it('Check remaining 10 stories are visible and able to Navigate', () =>{
+     ChickfilhomePage.Visit_Homepage_Url();
      ChickfilhomePage.visit21Img();
      ChickfilhomePage.clickonImg21link();
      ChickfilhomePage.viewImg21heading();
@@ -273,4 +279,4 @@ describe('visit Home Page Url', () => {
      cy.wait(3000);
      cy.go('back');
   })
-});
+ });
