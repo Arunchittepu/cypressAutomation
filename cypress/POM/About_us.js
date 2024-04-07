@@ -118,6 +118,67 @@ class aboutUs{
         cy.get(':nth-child(3) > .off-screen > span').should('be.visible').click();
     }
 
-    
+    AboutUsLoction(){
+        cy.findByRole('button', { name: 'About us', hidden: true }).click();
+    }
+    Hatillo_Link(){
+        cy.findByRole('link', { name: 'Hatillo' }).should('be.visible').click();
+    }
+    ManagerImg(){
+        cy.findByRole('img', { name: 'Juan Morales' }).should('be.visible');
+    }
+    ConnectHatillo(){
+        cy.findByRole('heading', { name: 'Connect with Hatillo' }).should('be.visible');
+    }
+    ChickfilDrinkImg(){
+        cy.get('[src="/-/media/images/cfacom/homepage-refresh-test/classic-desktop.jpg?h=426&w=722&la=es-PR&hash=220D349C6677E8B40F31CDEC693CCEA8"]').should('be.visible');
+    }
+    AppleAppStoreImg(){
+        cy.findByRole('link', { name: 'Download on the App Store' }).should('be.visible');
+    }
+    GooglePlayImg(){
+        cy.get('.google').should('be.visible');
+    }
+    CommunityLocation(){
+        cy.findByRole('button', { name: 'Community', hidden: true }).should('be.visible').click();
+    }
+    CarrersLocation(){
+        cy.findByRole('button', { name: 'Careers', hidden: true }).should('be.visible').click();
+    }
+    EmployeeScholarship_Carrers(){
+        cy.findByRole('link', { name: 'Employee Scholarship and Educational Assistance Opportunities' }).should('be.visible').click();
+    }
+    SearchPositions(){
+        cy.findByRole('link', { name: 'Search Positions' }).should('be.visible');
+    }
+    MeetTheScholars(){
+        cy.get('#dropdown-section > :nth-child(1) > a').should('be.visible');
+    }
+    TypesofScholars(){
+        cy.findByRole('link', { name: 'Types of scholarships' }).should('be.visible');
+    }
+    FrequentlyAskedQuestions(){
+        cy.findByRole('link', { name: 'Frequently asked questions' })
+    }
+    ScholarshipImg(){
+        cy.get('[src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/2022%20Scholarships/Other%20Images/Module-Image-(600x300)-6.png?h=300&w=600&la=en"]').should('be.visible');
+    }
+    Read_EddisStory(){
+        cy.findByRole('link', { name: "Read Eddie's story" }).should('be.visible');
+    }
+    ScholarshipImg2(){
+        cy.get(':nth-child(8) > .flex-wrapper > .img-wrapper > .desktop-img').should('be.visible');
+        //cy.get('[src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Scholarship%20Images/2023%20RFS%20Images/Modules/CFA2208003_RemarkableFutures_.com_Module_D_Types-Scholarships_600x300.jpg?h=300&w=600&la=en"]').should('be.visible');
+    }
+    ScholarshipImg3(){
+        cy.get('[src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/2022%20Scholarships/Other%20Images/Module-Image-(600x300)-2.png?h=300&w=600&la=en"]').scrollIntoView().should('be.visible');
+    }
+    Explore_discounts(){
+        cy.findByRole('link', { name: '\Explore tuition discounts' }).should('be.visible');
+    }
+    ScholarshipImg4(){
+        cy.get('[src="https://d1fd34dzzl09j.cloudfront.net/Images/CFACOM/Home%20Page%20Refresh/Home%20Page%20Refresh%20V2/March%202024%20update/CFA_one_footer_desktop.jpg?h=637&w=692&la=en"]').should('be.visible');
+    }
+
 }
 export default aboutUs;

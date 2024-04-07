@@ -1,6 +1,9 @@
 /// <reference types="@testing-library/cypress" />
 import '@testing-library/cypress/add-commands';
-
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from failing the test
+  return false
+})
 import aboutUs from "../POM/About_us.js";
 const ChickfilAboutusPage = new aboutUs();
 describe('visit Home Page Url', () => {
@@ -85,6 +88,39 @@ describe('visit Home Page Url', () => {
     ChickfilAboutusPage.checkRestaurantMenu();
     ChickfilAboutusPage.Nuggets_parrilla_Img();
     ChickfilAboutusPage.Nuggets_parrilla_link(); 
+  })
+
+  it('see about Us and able to navigate under location', () => {
+    ChickfilAboutusPage.visitlocations();
+    ChickfilAboutusPage.Hatillo_Link();
+    ChickfilAboutusPage.AboutUsLoction();
+    ChickfilAboutusPage.ManagerImg();
+    ChickfilAboutusPage.ConnectHatillo();
+    ChickfilAboutusPage.ChickfilDrinkImg();
+    ChickfilAboutusPage.AppleAppStoreImg();
+    ChickfilAboutusPage.GooglePlayImg();
+  })
+  it('see Community and able to navigate under location', () => {
+    ChickfilAboutusPage.visitlocations();
+    ChickfilAboutusPage.Hatillo_Link();
+    ChickfilAboutusPage.CommunityLocation();
+  })
+  it('see Carrers and able to navigate under location', () => {
+    ChickfilAboutusPage.visitlocations();
+    ChickfilAboutusPage.Hatillo_Link();
+    ChickfilAboutusPage.CarrersLocation();
+    ChickfilAboutusPage.EmployeeScholarship_Carrers();
+    ChickfilAboutusPage.MeetTheScholars();
+    ChickfilAboutusPage.TypesofScholars();
+    ChickfilAboutusPage.FrequentlyAskedQuestions();
+    cy.scrollTo('0,800');
+    ChickfilAboutusPage.ScholarshipImg();
+    ChickfilAboutusPage.Read_EddisStory();
+    cy.scrollTo('bottom');
+    ChickfilAboutusPage.ScholarshipImg2();
+    ChickfilAboutusPage.ScholarshipImg3();
+    ChickfilAboutusPage.Explore_discounts();
+    ChickfilAboutusPage.ScholarshipImg4();
   })
 
   it('visit Meal and Employment elements under About page',() =>{
